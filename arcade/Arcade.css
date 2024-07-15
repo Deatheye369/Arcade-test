@@ -1,11 +1,25 @@
-.wrapperSides{
-  display: flex;
-  flex-direction: row;
+.wrapper{
+  display:flex;
+  height: 100vh;
+}
+.wrapper .left,
+.wrapper .right{
+  width: 20%;
 
 }
-.wrapperSides.left,
-.wrapperSides.right{
-  width: 50%;
-  background-color: red;
-  height: 100vh;
+.wrapper .left{
+  background-color: black;
+}
+.wrapper .right{
+  background-color: red
+}
+.wrapper .middle{
+  width: 60%;
+  flex-direction: column;
+}
+.wrapper .middle .screen{
+  background-color: brown;
+}
+.wrapper .middle .controls{
+  background-color: blue;
 }
