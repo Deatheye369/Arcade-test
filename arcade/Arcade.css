@@ -5,14 +5,9 @@
 .wrapper .left,
 .wrapper .right{
   width: 20%;
+  background-color: yellow;
+}
 
-}
-.wrapper .left{
-  background-color: black;
-}
-.wrapper .right{
-  background-color: red
-}
 .wrapper .middle{
   width: 60%;
   flex-direction: column;
@@ -22,4 +17,24 @@
 }
 .wrapper .middle .controls{
   background-color: blue;
+}
+.wrapper .left .ghost,
+.wrapper .right .ghost{
+  img {
+    max-width: 40px;
+    max-height: 40px;
+    position: relative;
+    left: 50%;
+    top: 150px;
+  }
+}
+
+.wrapper .left .logo{
+  img {
+    max-width: 300px;
+    max-height: 50px;
+    position: relative;
+    left: 10%;
+    top: 1px;
+  }
 }
