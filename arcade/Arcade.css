@@ -34,7 +34,18 @@
     max-width: 300px;
     max-height: 50px;
     position: relative;
-    left: 10%;
+    left: 20%;
     top: 1px;
+  }
+}
+
+.wrapper .left .pac,
+.wrapper .right .pac{
+  img {
+    max-width: 40px;
+    max-height: 40px;
+    position: relative;
+    left: 20%;
+    top: 300px;
   }
 }
