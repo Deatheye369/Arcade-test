@@ -3,7 +3,20 @@ console.log("let me type please");
 
 const handleClick = (event) => {
   const direction = event.target.getAttribute("id");
-  console.log(direction);
+  switch (direction) {
+    case "ArrowUp":
+      console.log("up");
+      break;
+    case "ArrowDown":
+      console.log("down");
+      break;
+    case "ArrowLeft":
+      console.log("left");
+      break;
+    case "ArrowRight":
+      console.log("right");
+      break;
+  }
 };
 
 arrows.forEach((arrow) => {
