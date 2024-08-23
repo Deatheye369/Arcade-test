@@ -1,13 +1,24 @@
 arrows = document.querySelectorAll(".arrow");
+keepMoving = null;
 
-const handleKeyDown = (event) => {
-  console.log(event.key);
+const stopMove = (event) => {
+  const direction = event.target.getAttribute("id") || event.key;
+  clearInterval(keepMoving);
+  keepMoving = null;
+  document.getElementById(direction).classList.remove("pressed");
 };
 
-document.addEventListener("keydown", handleKeyDown);
+function handleClick(event) {
+  const direction = event.target.getAttribute("id") || event.key;
+  if (!event.reapeat) {
+    keepMoving = setInterval(() => {
+      displayResult(direction);
+    }, 150);
+  }
+  document.getElementById(direction).classList.add("pressed");
+}
 
-const handleClick = (event) => {
-  const direction = event.target.getAttribute("id");
+displayResult = (direction) => {
   switch (direction) {
     case "ArrowUp":
       console.log("up");
@@ -24,6 +35,10 @@ const handleClick = (event) => {
   }
 };
 
+//document.addEventListener("keydown", handleClick);
+//document.addEventListener("keyup", stopMove);
+
 arrows.forEach((arrow) => {
-  arrow.addEventListener("click", handleClick);
+  arrow.addEventListener("mousedown", handleClick);
+  arrow.addEventListener("mouseup", stopMove);
 });

@@ -74,7 +74,6 @@ h1{
     height: 0; 
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    
     border-bottom: 30px solid black;
     cursor: pointer;
   }
@@ -88,3 +87,7 @@ h1{
     .joystick-wrapper div:nth-of-type(4){
     transform: rotate(180deg);
     }
+
+.pressed{
+  border-bottom: 30px solid rgb(0, 179, 255);
+}
