@@ -1,9 +1,5 @@
 arrows = document.querySelectorAll(".arrow");
 
-const handleKeyDown = (event) => {
-  console.log(event.key);
-};
-
 document.addEventListener("keydown", handleKeyDown);
 
 const handleClick = (event) => {
